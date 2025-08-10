@@ -53,11 +53,10 @@ def stretch_audio(in_wav, out_wav, target_ms):
     return result.returncode == 0
 
 # mp4, srt, language -> translated_srt, translated_cloned_wav
-def new_audio(mp4_in, srt_in, language, reference_voice, translated_srt, final_wav):
+def new_audio(mp4_in, srt_in, language, translated_dir, ckpt_converter, reference_voice, translated_srt, final_wav):
     langcode = get_ISO639(language)
     extract_audio(mp4_in, reference_voice) # extract audio file
     asyncio.run(parse(srt_in, translated_srt, langcode)) # translate srt
-    translated_dir = f"{language}_output"
 
     device = "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"Using device: {device}")
@@ -137,18 +136,4 @@ def new_audio(mp4_in, srt_in, language, reference_voice, translated_srt, final_w
 def combine_audio_video(mp4_in, final_wav, mp4_out):
     subprocess.run(["ffmpeg", "-i", mp4_in, "-i", final_wav, "-map", "0:0", "-map", "1:0", '-c', "copy", mp4_out])
 
-# configuration
-mp4_in = "Tanzania-2.mp4"
-srt_in = "Tanzania-caption.srt"
 
-translated_srt = "translated.srt"
-ckpt_converter = 'OpenVoice/checkpoints_v2/converter'
-language = "german"
-translated_dir = f"intermediate_{language}_outputs"
-reference_voice = os.path.join(translated_dir, "reference_voice.wav")
-final_wav = os.path.join(translated_dir, f"cloned_{language}_wav.wav")
-mp4_out = "translated_vid.mp4"
-
-
-new_audio(mp4_in, srt_in, language, reference_voice, translated_srt, final_wav)
-combine_audio_video(mp4_in, final_wav, mp4_out)
