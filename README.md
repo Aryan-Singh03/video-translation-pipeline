@@ -45,7 +45,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
    - Ensure the SRT file contains English subtitles with proper timing
 
 2. **Configure the translation:**
-   - Open `translate.py` (or `demo.py`)
+   - Open `demo.py`
    - Modify the following parameters:
      ```python
      mp4_in = "your_video.mp4"
@@ -55,7 +55,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
 
 3. **Run the translation:**
    ```bash
-   python translate.py
+   python demo.py
    ```
 
 ## Example Usage
