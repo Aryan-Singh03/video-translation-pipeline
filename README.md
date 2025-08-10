@@ -1,12 +1,12 @@
 # Video Translation Pipeline: English to German
 
-This repository implements a complete video translation pipeline that converts English videos to German while preserving the original speaker's voice characteristics, tone, and identity.
+This repository implements a complete video translation pipeline that converts English videos to a language of hte user's choice while preserving the original speaker's voice characteristics, tone, and identity.
 
 ## Overview
 
 Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
-1. Extracts original audio and translates subtitles to German
-2. Generates German speech using Google TTS
+1. Extracts original audio and translates subtitles to intended language
+2. Generates new language speech using Google TTS
 3. Applies voice cloning using OpenVoice to match the original speaker's characteristics
 4. Synchronizes the cloned audio with video timing
 5. Produces a final translated video with seamless audio replacement
@@ -63,7 +63,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
 An example input and output are provided in the `example/` folder:
 - `example/input.mp4` - Sample English video
 - `example/input.srt` - Corresponding English subtitles
-- `example/output.mp4` - Translated German video
+- `example/output.mp4` - Translated  video
 - `example/intermediates/` - Processing intermediates for debugging
 
 To test with the example:
