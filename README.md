@@ -16,13 +16,15 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
 - **Python 3.9** (required for compatibility with all dependencies)
 - Sufficient disk space for model downloads (~1GB for OpenVoice model and checkpoint)
 - Input files: MP4 video and corresponding SRT subtitle file
+- FFmpeg (for audio/video processing)
+- Rubberband (for audio time-stretching)
 
 ## Setup Instructions
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-name>
+   git clone https://github.com/yourusername/voiceTranslation.git
+   cd voiceTranslation
    ```
 
 2. **Create and activate virtual environment:**
@@ -36,7 +38,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
    python setup.py
    ```
    
-   This will download everything from requirements.txt as well as OpenVoice model and checkpoint files needed for voice cloning.
+   This will download everything from requirements.txt as well as clone the OpenVoice repo and downlaod the model and checkpoints for voice cloning.
 
 ## Usage
 
@@ -50,7 +52,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
      ```python
      mp4_in = "your_video.mp4"
      srt_in = "your_subtitles.srt"
-     target_language = "de"  # German
+     target_language = "german"
      ```
 
 3. **Run the translation:**
@@ -119,6 +121,9 @@ See `requirements.txt` for complete dependency list. Key libraries include:
 - OpenVoice (voice cloning)
 - Google Text-to-Speech
 - Various audio processing libraries
+Required external tools (make sure these are installed and accesible in your PATH):
+-FFmpeg
+-Rubberband
 
 ## Troubleshooting
 
