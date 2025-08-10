@@ -70,8 +70,9 @@ An example input and output are provided in the `example/` folder:
 - `example/intermediates/` - Processing intermediates for debugging
 
 To test with the example:
+move "Tanzania-2.mp4" and "Tanzania-caption.srt" from example to your working directory. Then, run:
 ```bash
-python translate.py  # Using example files as default
+python demo.py  # Using example files as default
 ```
 
 ## Pipeline Steps
