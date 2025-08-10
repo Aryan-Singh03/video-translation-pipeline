@@ -114,7 +114,6 @@ The pipeline generates:
 3. **Alternative Voice Cloning Models:** Explore ElevenLabs, Coqui, or other voice cloning services
 4. **Batch Processing:** Optimize model calls for better performance on longer videos instead of calling per subtitle
 5. **Direct Generation:** Skip TTS intermediate step and generate voice-cloned audio directly
-6. **LLM Comparison:** Compare performance with large language model approaches (e.g., OpenAI)
 
 ## Dependencies
 
