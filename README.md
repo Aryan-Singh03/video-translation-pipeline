@@ -111,8 +111,8 @@ The pipeline generates:
 
 1. **Lip Syncing:** Implement lip syncing for better video quality
 2. **Automatic Subtitle Extraction:** Implement speech-to-text to generate SRT files automatically
-3. **Alternative Voice Cloning Models:** Explore ElevenLabs, Coqui, or other voice cloning services
-4. **Batch Processing:** Optimize model calls for better performance on longer videos instead of calling per subtitle
+3. **Alternative Voice Cloning Models:** Try ElevenLabs, Coqui, or other voice cloning services (potentially improved capabilities)
+4. **Batch Processing:** Optimize model calls for better performance on longer videos instead of calling OpenVoice model per subtitle
 5. **Direct Generation:** Skip TTS intermediate step and generate voice-cloned audio directly
 
 ## Dependencies
