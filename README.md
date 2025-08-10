@@ -28,7 +28,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
 2. **Create and activate virtual environment:**
    ```bash
    python3.9 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # windows: venv\Scripts\activate
    ```
 
 3. **Install dependencies and download models:**
@@ -36,7 +36,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
    python setup.py
    ```
    
-   This will download the OpenVoice model and checkpoint files needed for voice cloning.
+   This will download everything from requirements.txt as well as OpenVoice model and checkpoint files needed for voice cloning.
 
 ## Usage
 
