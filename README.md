@@ -63,9 +63,10 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
 ## Example Usage
 
 An example input and output are provided in the `example/` folder:
-- `example/input.mp4` - Sample English video
-- `example/input.srt` - Corresponding English subtitles
-- `example/output.mp4` - Translated  video
+- `example/Tanzania-2.mp4` - Sample English video
+- `example/Tanzania-caption.srt` - Corresponding English subtitles
+- `example/translated_vid.mp4` - Translated  video
+- `example/translated.srt` - Translated  srt file
 - `example/intermediates/` - Processing intermediates for debugging
 
 To test with the example:
