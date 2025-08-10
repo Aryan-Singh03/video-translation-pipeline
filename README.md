@@ -1,6 +1,6 @@
 # Video Translation Pipeline: English to German
 
-This repository implements a complete video translation pipeline that converts English videos to a language of hte user's choice while preserving the original speaker's voice characteristics, tone, and identity.
+This repository implements a complete video translation pipeline that converts English videos to a language of the user's choice while preserving the original speaker's voice characteristics, tone, and identity.
 
 ## Overview
 
