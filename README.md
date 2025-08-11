@@ -24,7 +24,7 @@ Given an input MP4 video and corresponding SRT subtitle file, this pipeline:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Aryan-Singh03/voiceTranslation.git
-   cd voiceTranslation
+   cd video-translation-pipeline
    ```
 
 2. **Create and activate virtual environment:**

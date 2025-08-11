@@ -55,13 +55,14 @@ def stretch_audio(in_wav, out_wav, target_ms):
 # mp4, srt, language -> translated_srt, translated_cloned_wav
 def new_audio(mp4_in, srt_in, language, translated_dir, ckpt_converter, reference_voice, translated_srt, final_wav):
     langcode = get_ISO639(language)
+    os.makedirs(translated_dir, exist_ok=True)
     extract_audio(mp4_in, reference_voice) # extract audio file
     asyncio.run(parse(srt_in, translated_srt, langcode)) # translate srt
 
     device = "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"Using device: {device}")
 
-    os.makedirs(translated_dir, exist_ok=True)
+
 
     # loading model
     tone_color_converter = ToneColorConverter(f'{ckpt_converter}/config.json', device=device)
